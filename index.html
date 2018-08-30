@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
+    <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+</head>
+
+<body>
+    <ons-page>
+        <ons-toolbar>
+            <ons-page id="Shopping-page">
+                <ons-toolbar>
+                    <div class="left">
+                        <ons-toolbar-button icon="fa-shopping-bag"></ons-toolbar-button>
+                    </div>
+
+                    <div class="center">Shopping</div>
+
+                    <div class="right">
+                        <ons-toolbar-button icon="md-help"></ons-toolbar-button>
+                    </div>
+                </ons-toolbar>
+
+                <p style="text-align: center">Some content.</p>
+            </ons-page>
+        </ons-toolbar>
+
+        <ons-tabbar swipeable position="auto">
+            <ons-tab page="tab1.html" label="Home" icon="ion-home, material:md-home" active>
+            </ons-tab>
+            <ons-tab page="tab2.html" label="Cart" icon="md-shopping-cart">
+            </ons-tab>
+        </ons-tabbar>
+    </ons-page>
+
+    <template id="tab1.html">
+        <ons-page id="Tab1">
+            <p style="text-align: center; margin-top: 10px;">
+                <ons-search-input placeholder="Search" onchange="ons.notification.alert('Searched for: ' + this.value)"></ons-search-input>
+            </p>
+
+            <ons-carousel swipeable auto-scroll overscrollable id="carousel" style="height: 200px;">
+                <ons-carousel-item style="background: url(1.jpg)no-repeat center;background-size: contain;">
+
+                </ons-carousel-item>
+                <ons-carousel-item style="background: url(2.jpg)no-repeat center;background-size: contain;">
+
+                </ons-carousel-item>
+                <ons-carousel-item style="background: url(3.jpg)no-repeat center;background-size: contain;">
+
+                </ons-carousel-item>
+            </ons-carousel>
+            <ons-row style="height:120px" vertical-align="center">
+                <ons-col style="background:#800080;">
+                    <p style="text-align: center; margin: 10px;">
+                        <i class="zmdi zmdi-face zmdi-hc-4x"></i>
+                    </p>
+                    <p style="text-align: center; margin: 10px;">
+                        Beauty
+                    </p>
+                </ons-col>
+                <ons-col style="background:#FF00FF;">
+                    <p style="text-align: center; margin: 10px;">
+                        <i class="zmdi zmdi-bike zmdi-hc-4x"></i>
+                    </p>
+                    <p style="text-align: center; margin: 10px;">
+                        Sport
+                    </p>
+                </ons-col>
+                <ons-col style="background:#000080;">
+                    <p style="text-align: center; margin: 10px;">
+                        <i class="zmdi zmdi zmdi-laptop-chromebook zmdi-hc-4x"></i>
+                    </p>
+                    <p style="text-align: center; margin: 10px;">
+                        Computer
+                    </p>
+                </ons-col>
+            </ons-row>
+
+            <ons-row style="height:120px" vertical-align="center">
+                <ons-col style="background:#0000FF;">
+                    <p style="text-align: center; margin: 10px;">
+                        <i class="zmdi zmdi-camera-party-mode zmdi-hc-4x"></i>
+                    </p>
+                    <p style="text-align: center; margin: 10px;">
+                        Camera
+                    </p>
+                </ons-col>
+                <ons-col style="background:#008080;">
+                    <p style="text-align: center; margin: 10px;">
+                        <i class="zmdi zmdi-seat zmdi-hc-4x"></i>
+                    </p>
+                    <p style="text-align: center; margin: 10px;">
+                        Furniture
+                    </p>
+                </ons-col>
+                <ons-col style="background:#00FFFF;">
+                    <p style="text-align: center; margin: 10px;">
+                        <i class="zmdi zmdi-smartphone-android zmdi-hc-4x"></i>
+                    </p>
+                    <p style="text-align: center; margin: 10px;">
+                        Smart Phone
+                    </p>
+                </ons-col>
+            </ons-row>
+
+            <ons-row style="height:120px" vertical-align="center">
+                <ons-col style="background:#008000;">
+                    <p style="text-align: center; margin: 10px;">
+                        <i class="zmdi zmdi zmdi-toys zmdi-hc-4x"></i>
+                    </p>
+                    <p style="text-align: center; margin: 10px;">
+                        Toy
+                    </p>
+                </ons-col>
+                <ons-col style="background:#00FF00;">
+                    <p style="text-align: center; margin: 10px;">
+                        <i class="zmdi zmdi-wrench zmdi-hc-4x"></i>
+                    </p>
+                    <p style="text-align: center; margin: 10px;">
+                        Hardware
+                    </p>
+                </ons-col>
+                <ons-col style="background:#FFFF00;">
+                    <p style="text-align: center; margin: 10px;">
+                        <i class="zmdi zmdi-reader zmdi-hc-4x"></i>
+                    </p>
+                    <p style="text-align: center; margin: 10px;">
+                        Application
+                    </p>
+                </ons-col>
+            </ons-row>
+        </ons-page>
+    </template>
+            
+    <template id="tab2.html">
+        <ons-page id="Tab2">
+            <p style="text-align: center;">
+
+            </p>
+            <ons-list>
+                <ons-list-header>Shopping Cart</ons-list-header>
+                <ons-list-item>
+                    <div class="left">
+                        <img class="list-item__thumbnail" src="item1.jpg">
+                    </div>
+                    <div class="center">
+                        <span class="list-item__title">Apple Watch Series 3 Gps 42mm Grey</span>
+                        <span class="list-item__subtitle">$12,650.00</span>
+                    </div>
+                    <div class="right">
+
+                        <ons-icon icon="md-delete"></ons-icon>
+
+                    </div>
+                </ons-list-item>
+
+                <ons-list-item>
+                    <div class="left">
+                        <img class="list-item__thumbnail" src="item2.jpg">
+                    </div>
+                    <div class="center">
+                        <span class="list-item__title">MICROLAB SPEAKER2.1</span>
+                        <span class="list-item__subtitle">$1,570.00</span>
+                    </div>
+                    <div class="right">
+
+                        <ons-icon icon="md-delete"></ons-icon>
+
+                    </div>
+                </ons-list-item>
+
+                <ons-list-item>
+                    <div class="left">
+                        <img class="list-item__thumbnail" src="item3.jpg">
+                    </div>
+                    <div class="center">
+                        <span class="list-item__title">Nike Air Max 90 ดำเทาแดง Size 40</span>
+                        <span class="list-item__subtitle">$2,990.00</span>
+                    </div>
+                    <div class="right">
+
+                        <ons-icon icon="md-delete"></ons-icon>
+
+                    </div>
+                </ons-list-item>
+
+                <ons-button modifier="large">Proceed To Pay</ons-button>
+        </ons-page>
+
+    </template>
+</body>
+
+</html>
+<script>
+    document.addEventListener('prechange', function (event) {
+        document.querySelector('ons-toolbar .center')
+            .innerHTML = event.tabItem.getAttribute('label');
+    });
+
+</script>
